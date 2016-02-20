@@ -1,22 +1,21 @@
 export ZSH=$HOME/.oh-my-zsh
-export ZSH_CUSTOM=$HOME/.dotfiles/zsh
+export ZSH_CUSTOM=$HOME/.zsh
 export DISABLE_AUTO_UPDATE="true"
 export DISABLE_AUTO_TITLE="true"
 export EDITOR=nvim
-export DOTFILES=$HOME/.dotfiles
 export PROJECTS=~/github.com
 
 unalias run-help
 autoload run-help
 export HELPDIR=/usr/local/share/zsh/help
 
-. $DOTFILES/zsh/async.zsh
-. $DOTFILES/zsh/pure.zsh
-. $DOTFILES/zsh/fzf.zsh
+. $ZSH_CUSTOM/async.zsh
+. $ZSH_CUSTOM/pure.zsh
+. $ZSH_CUSTOM/fzf.zsh
 
 # autoload functions
-fpath=($DOTFILES/zsh/functions $fpath)
-autoload -U $DOTFILES/zsh/functions/*(:t)
+fpath=($ZSH_CUSTOM/functions $fpath)
+autoload -U $ZSH_CUSTOM/functions/*(:t)
 
 # plugins...
 plugins=(git git-extras brew golang)
@@ -43,14 +42,14 @@ export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # aliases
-source $DOTFILES/zsh/aliases.zsh
+source $ZSH_CUSTOM/aliases.zsh
 
 # initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit
 compinit
 
 # manually sourced plugins
-source $DOTFILES/zsh/plugins/z.sh
+source $ZSH_CUSTOM/plugins/z.sh
 
 # my scripts
 PATH=$HOME/bin:$PATH
