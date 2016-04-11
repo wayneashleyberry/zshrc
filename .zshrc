@@ -18,7 +18,7 @@ fpath=($ZSH_CUSTOM/functions $fpath)
 autoload -U $ZSH_CUSTOM/functions/*(:t)
 
 # plugins...
-plugins=(git git-extras brew golang)
+plugins=(git git-extras brew golang k)
 
 function precmd () {
     _z --add "$(pwd -P)"
@@ -50,6 +50,7 @@ compinit
 
 # manually sourced plugins
 source $ZSH_CUSTOM/plugins/z.sh
+source $ZSH_CUSTOM/plugins/k/k.sh
 
 # my scripts
 PATH=$HOME/bin:$PATH
