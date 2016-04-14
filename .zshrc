@@ -3,7 +3,7 @@ export ZSH_CUSTOM=$HOME/.zsh
 export DISABLE_AUTO_UPDATE="true"
 export DISABLE_AUTO_TITLE="true"
 export EDITOR=nvim
-export PROJECTS=~/github.com
+export PROJECTS=~/src/github.com
 
 unalias run-help
 autoload run-help
