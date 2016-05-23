@@ -41,6 +41,10 @@ export NODE_PATH="/usr/local/lib/node_modules"
 export RBENV_ROOT=/usr/local/var/rbenv
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+# http://jrnl.sh/encryption.html#a-note-on-security
+setopt HIST_IGNORE_SPACE
+alias jrnl=" jrnl"
+
 # aliases
 source $ZSH_CUSTOM/aliases.zsh
 
