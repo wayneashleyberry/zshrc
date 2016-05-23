@@ -61,3 +61,6 @@ PATH=$HOME/bin:$PATH
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/Wayne/google-cloud-sdk/path.zsh.inc'
