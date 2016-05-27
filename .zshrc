@@ -2,6 +2,7 @@ export ZSH=$HOME/.oh-my-zsh
 export ZSH_CUSTOM=$HOME/.zsh
 export DISABLE_AUTO_UPDATE="true"
 export DISABLE_AUTO_TITLE="true"
+export PURE_PROMPT_SYMBOL="🍡 "
 export EDITOR=nvim
 export PROJECTS=~/src/github.com
 
