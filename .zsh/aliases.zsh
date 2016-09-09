@@ -18,3 +18,6 @@ alias vi='nvim'
 alias gh='open-github'
 alias ack='sift'
 alias ag='sift'
+
+# misc
+alias weather='curl "wttr.in/Cape Town"'
