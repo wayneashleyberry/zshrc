@@ -1,5 +1,3 @@
-alias gg='echo "No project set"'
-
 # directories
 alias ls="ls -FG"
 alias l="ls -lhG"
