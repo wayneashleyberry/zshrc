@@ -1,10 +1,10 @@
 # directories
+alias c="cd"
 alias ls="ls -FG"
 alias l="ls -lhG"
 alias ll="clear && ls -lhG"
 alias la='ls -AG'
 alias ..='cd ..'
-alias md='mkdir -p'
 
 # git
 alias br='git checkout -b'
@@ -18,5 +18,3 @@ alias vi='nvim'
 alias gh='open-github'
 alias ack='sift'
 alias ag='sift'
-alias glp='gulp'
-alias artisan='php artisan'
