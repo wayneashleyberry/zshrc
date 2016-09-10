@@ -21,3 +21,4 @@ alias ag='sift'
 
 # misc
 alias weather='curl "wttr.in/Cape Town"'
+alias gg='cd $(git rev-parse --show-cdup)'
