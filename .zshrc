@@ -3,7 +3,6 @@ export ZSH_CUSTOM=$HOME/.zsh
 export HELPDIR=/usr/local/share/zsh/help
 export DISABLE_AUTO_UPDATE="true"
 export DISABLE_AUTO_TITLE="true"
-export PURE_PROMPT_SYMBOL="🍡 "
 export EDITOR=nvim
 export GOPATH=~/
 CDPATH=.:$GOPATH/src/github.com:$GOPATH/src
