@@ -4,7 +4,7 @@ export HELPDIR=/usr/local/share/zsh/help
 export DISABLE_AUTO_UPDATE="true"
 export DISABLE_AUTO_TITLE="true"
 export EDITOR=nvim
-export GOPATH=~/
+export GOPATH=$HOME
 CDPATH=.:$GOPATH/src/github.com:$GOPATH/src
 
 unalias run-help
