@@ -1,5 +1,5 @@
 # directories
-alias c="cd"
+alias gg='cd $(git rev-parse --show-toplevel)'
 alias ls="ls -FG"
 alias l="ls -lhG"
 alias ll="clear && ls -lhG"
@@ -18,7 +18,4 @@ alias vi='nvim'
 alias gh='open-github'
 alias ack='sift'
 alias ag='sift'
-
-# misc
 alias weather='curl "wttr.in/Cape Town"'
-alias gg='cd $(git rev-parse --show-toplevel)'
