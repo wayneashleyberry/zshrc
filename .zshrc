@@ -1,61 +1,30 @@
-export ZSH=$HOME/.oh-my-zsh
-export ZSH_CUSTOM=$HOME/.zsh
-export HELPDIR=/usr/local/share/zsh/help
-export DISABLE_AUTO_UPDATE="true"
-export DISABLE_AUTO_TITLE="true"
-export EDITOR=nvim
 export GOPATH=$HOME
+
+# zplug setup
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
+
+# the plugins
+zplug "supercrabtree/k"
+zplug "mafredri/zsh-async"
+zplug "sindresorhus/pure"
+zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-syntax-highlighting", nice:10
+
+# install plugins if there are any that have not been installed
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+
+# source plugins and add commands to $PATH
+zplug load
+
+# misc
 CDPATH=.:$GOPATH/src/github.com:$GOPATH/src
+PATH=/usr/local/bin:/usr/local/sbin:$PATH:$GOPATH/bin
+zstyle ':completion:*' menu select
 
-unalias run-help
-autoload run-help
-
-. $ZSH_CUSTOM/async.zsh
-. $ZSH_CUSTOM/pure.zsh
-. $ZSH_CUSTOM/fzf.zsh
-
-# plugins...
-plugins=(git brew golang)
-
-# oh-my-zsh
-source $ZSH/oh-my-zsh.sh
-
-# homebrew binaries
-PATH=/usr/local/bin:/usr/local/sbin:$PATH
-
-# golang
-PATH=$GOPATH/bin:/usr/local/sbin:$PATH
-
-# node
-export NODE_PATH="/usr/local/lib/node_modules"
-
-# rubby
-export RBENV_ROOT=/usr/local/var/rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-
-# http://jrnl.sh/encryption.html#a-note-on-security
-setopt HIST_IGNORE_SPACE
-alias jrnl=" jrnl"
-
-# aliases
-source $ZSH_CUSTOM/aliases.zsh
-
-# my scripts
-PATH=$HOME/bin:$PATH
-
-# added by travis gem
-[ -f /Users/Wayne/.travis/travis.sh ] && source /Users/Wayne/.travis/travis.sh
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f /Users/Wayne/Downloads/google-cloud-sdk/path.zsh.inc ]; then
-  source '/Users/Wayne/Downloads/google-cloud-sdk/path.zsh.inc'
-fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f /Users/Wayne/Downloads/google-cloud-sdk/completion.zsh.inc ]; then
-  source '/Users/Wayne/Downloads/google-cloud-sdk/completion.zsh.inc'
-fi
-
-[[ -s "/Users/Wayne/.gvm/scripts/gvm" ]] && source "/Users/Wayne/.gvm/scripts/gvm"
+dailyverse
