@@ -47,3 +47,15 @@ PATH=$HOME/bin:$PATH
 [ -f /Users/Wayne/.travis/travis.sh ] && source /Users/Wayne/.travis/travis.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f /Users/Wayne/Downloads/google-cloud-sdk/path.zsh.inc ]; then
+  source '/Users/Wayne/Downloads/google-cloud-sdk/path.zsh.inc'
+fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f /Users/Wayne/Downloads/google-cloud-sdk/completion.zsh.inc ]; then
+  source '/Users/Wayne/Downloads/google-cloud-sdk/completion.zsh.inc'
+fi
+
+[[ -s "/Users/Wayne/.gvm/scripts/gvm" ]] && source "/Users/Wayne/.gvm/scripts/gvm"
